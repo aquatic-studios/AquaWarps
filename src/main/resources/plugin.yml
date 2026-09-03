@@ -1,0 +1,86 @@
+#                                                            Developed by Senkex
+#                                                        (Aquatic Studios @ (C) 2026)
+
+name: AquaWarps
+version: '${project.version}'
+author: 'Senkex'
+
+api-version: '1.16'
+folia-supported: true
+
+main: com.aquaticstudios.aquawarps.AquaWarps
+website: 'https://github.com/aquatic-studios/AquaWarps'
+
+softdepend: [PlaceholderAPI, Vault]
+
+commands:
+  aquawarps:
+    description: Main Command.
+    aliases: [warps, pwarp, pwarps, playerwarps, aw]
+    usage: /aquawarps
+
+permissions:
+  aquawarps.command:
+    default: true
+  aquawarps.create:
+    default: true
+  aquawarps.delete:
+    default: true
+  aquawarps.edit:
+    default: true
+  aquawarps.teleport:
+    default: true
+  aquawarps.list:
+    default: true
+  aquawarps.search:
+    default: true
+  aquawarps.random:
+    default: true
+  aquawarps.favorite:
+    default: true
+  aquawarps.rate:
+    default: true
+  aquawarps.review:
+    default: true
+  aquawarps.report:
+    default: true
+  aquawarps.promote:
+    default: true
+  aquawarps.trust:
+    default: true
+  aquawarps.ban:
+    default: true
+  aquawarps.tags:
+    default: true
+  aquawarps.passport:
+    default: true
+  aquawarps.pearls:
+    default: true
+  aquawarps.back:
+    default: true
+  aquawarps.top:
+    default: true
+  aquawarps.info:
+    default: true
+  aquawarps.icon.custom:
+    default: op
+  aquawarps.format:
+    default: op
+  aquawarps.limit.3:
+    default: true
+  aquawarps.bypass.cooldown:
+    default: op
+  aquawarps.bypass.warmup:
+    default: op
+  aquawarps.bypass.fee:
+    default: op
+  aquawarps.bypass.ban:
+    default: op
+  aquawarps.bypass.private:
+    default: op
+  aquawarps.bypass.world:
+    default: op
+  aquawarps.admin:
+    default: op
+  aquawarps.reload:
+    default: op

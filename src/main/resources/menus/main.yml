@@ -1,0 +1,182 @@
+menu_title: '&8AquaWarps'
+size: 45
+
+items:
+  browse:
+    material: COMPASS
+    slot: 10
+    display_name: '&#FFEE00&lBrowse Warps'
+    lore:
+      - '&7Walk through every warp the'
+      - '&7community has published.'
+      - ''
+      - '&#54ADF4Total warps: &f%aquawarps_total%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] browse'
+
+  categories:
+    material: CHEST
+    slot: 11
+    display_name: '&#FFEE00&lCategories'
+    lore:
+      - '&7Filter by theme: shops, farms,'
+      - '&7minigames and more.'
+      - ''
+      - '&#54ADF4Categories: &f%aquawarps_categories%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] categories'
+
+  trending:
+    material: HEART_OF_THE_SEA
+    slot: 12
+    display_name: '&#FFEE00&lThe Current'
+    lore:
+      - '&7The warps everyone is visiting'
+      - '&7right now, ranked live.'
+      - ''
+      - '&#54ADF4Promoted: &f%aquawarps_promoted%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] trending'
+
+  tops:
+    material: GOLDEN_HORSE_ARMOR
+    slot: 13
+    display_name: '&#FFEE00&lRankings'
+    lore:
+      - '&7Best rated, most visited, most'
+      - '&7saved and highest level warps.'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] tops'
+
+  random:
+    material: ENDER_PEARL
+    slot: 14
+    display_name: '&#FFEE00&lDrift Away'
+    lore:
+      - '&7The current takes you to a warp'
+      - '&7you have never visited.'
+      - ''
+      - '&#FF9E08Click to travel'
+    left_click_commands:
+      - '[random]'
+
+  favorites:
+    material: NETHER_STAR
+    slot: 15
+    display_name: '&#FFEE00&lFavourites'
+    lore:
+      - '&7The warps you saved.'
+      - ''
+      - '&#54ADF4Saved: &f%aquawarps_favorites%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] favorites'
+
+  my_warps:
+    material: WRITABLE_BOOK
+    slot: 16
+    display_name: '&#FFEE00&lMy Warps'
+    lore:
+      - '&7Create, edit and promote'
+      - '&7your own warps.'
+      - ''
+      - '&#54ADF4Warps: &f%aquawarps_warps%&7/&f%aquawarps_limit%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] my_warps'
+
+  passport:
+    material: FILLED_MAP
+    slot: 21
+    display_name: '&#FFEE00&lPassport'
+    lore:
+      - '&7Every new warp you visit leaves'
+      - '&7a stamp in your passport.'
+      - ''
+      - '&#54ADF4Stamps: &f%aquawarps_stamps%'
+      - '&#54ADF4Rank: %aquawarps_rank%'
+      - '&#54ADF4Next: %aquawarps_next_rank%'
+      - '%aquawarps_rank_progress%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] passport'
+
+  search:
+    material: SPYGLASS
+    slot: 22
+    display_name: '&#FFEE00&lSearch'
+    lore:
+      - '&7Look for a warp by name,'
+      - '&7owner or tag.'
+      - ''
+      - '&#54ADF4Current filter: &f%aquawarps_search%'
+      - ''
+      - '&#FF9E08Left click to write'
+      - '&#FF9E08Right click to clear'
+    left_click_commands:
+      - '[input] search browse'
+    right_click_commands:
+      - '[clear-search]'
+      - '[refresh]'
+
+  pearls:
+    material: PRISMARINE_SHARD
+    slot: 23
+    display_name: '&#FFEE00&l%aquawarps_currency%'
+    lore:
+      - '&7You earn pearls when players visit,'
+      - '&7rate or save your warps.'
+      - ''
+      - '&#54ADF4Balance: &f%aquawarps_pearls%'
+      - '&#54ADF4Extra slots: &f%aquawarps_extra_slots%&7/&f%aquawarps_max_extra_slots%'
+      - ''
+      - '&7Spend them on promotions and slots.'
+
+  profile:
+    material: PLAYER_HEAD
+    slot: 39
+    head: '%viewer%'
+    display_name: '&#FFEE00&lYour Logbook'
+    lore:
+      - '&7Everything you have done so far.'
+      - ''
+      - '&#54ADF4Warps: &f%aquawarps_warps%&7/&f%aquawarps_limit%'
+      - '&#54ADF4Pearls: &f%aquawarps_pearls%'
+      - '&#54ADF4Stamps: &f%aquawarps_stamps%'
+      - '&#54ADF4Rank: %aquawarps_rank%'
+      - '&#54ADF4Visits received: &f%aquawarps_visits%'
+      - '&#54ADF4Favourites: &f%aquawarps_favorites%'
+
+  close:
+    material: BARRIER
+    slot: 40
+    display_name: '&#FF2D2D&lClose'
+    lore:
+      - '&7Close this menu.'
+    left_click_commands:
+      - '[close]'
+
+  admin:
+    material: COMPARATOR
+    slot: 41
+    permission: 'aquawarps.admin'
+    display_name: '&#FF2D2D&lAdministration'
+    lore:
+      - '&7Staff panel.'
+      - ''
+      - '&#54ADF4Pending reports: &f%aquawarps_reports%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] admin'
