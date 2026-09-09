@@ -16,7 +16,7 @@ softdepend: [PlaceholderAPI, Vault]
 commands:
   aquawarps:
     description: Main Command.
-    aliases: [warps, pwarp, pwarps, playerwarps, aw]
+    aliases: [aqwarps, pwarp, pwarps, playerwarps, aw, aqw]
     usage: /aquawarps
 
 permissions:

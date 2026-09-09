@@ -26,6 +26,9 @@ import com.aquaticstudios.aquawarps.util.NameCache;
 import com.aquaticstudios.aquawarps.util.Scheduler;
 import com.aquaticstudios.aquawarps.util.Settings;
 import com.aquaticstudios.aquawarps.util.MessageService;
+import org.bstats.bukkit.Metrics;
+import org.bstats.charts.SimplePie;
+import org.bstats.charts.SingleLineChart;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -38,10 +41,12 @@ public final class AquaWarps extends JavaPlugin {
     private static final String[] MENUS = {
             "admin", "all_warps", "browse", "categories", "favorites", "main", "my_warps",
             "newest", "passport", "reports", "sort", "stamps", "top_favorites", "top_level",
-            "top_rated", "top_visits", "tops", "trending", "warp_bans", "warp_delete", "warp_edit",
-            "warp_icons", "warp_info", "warp_particles", "warp_promote", "warp_rate",
-            "warp_report", "warp_reviews", "warp_trusted"
+            "top_rated", "top_visits", "tops", "trending", "warp_bans", "warp_categories",
+            "warp_delete", "warp_edit", "warp_icons", "warp_info", "warp_particles",
+            "warp_promote", "warp_rate", "warp_report", "warp_reviews", "warp_trusted"
     };
+
+    private static final int METRICS_ID = 33943;
 
     private volatile Settings settings;
     private Scheduler scheduler;
@@ -60,6 +65,7 @@ public final class AquaWarps extends JavaPlugin {
     private MenuRegistry menus;
     private VaultHook economy;
     private WarpCommand command;
+    private Metrics metrics;
 
     @Override
     public void onLoad() {
@@ -106,7 +112,7 @@ public final class AquaWarps extends JavaPlugin {
 
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
             new WarpExpansion(this).register();
-            getLogger().info("Hooked into PlaceholderAPI.");
+            getLogger().info("Hooked into PlaceholderAPI");
         }
 
         for (Player online : Bukkit.getOnlinePlayers()) {
@@ -114,11 +120,20 @@ public final class AquaWarps extends JavaPlugin {
             profiles.load(online);
         }
 
-        getLogger().info("AquaWarps enabled.");
+        startMetrics();
+
+        getLogger().info("Enabled! Storage: " + settings.storageType().display()
+                + ", menus: " + menus.names().size()
+                + ", chat: " + messages.sink().active()
+                + ", Folia: " + scheduler.isFolia()
+                + ", loading warps in the background");
     }
 
     @Override
     public void onDisable() {
+        if (metrics != null) {
+            metrics.shutdown();
+        }
         if (chatInput != null) {
             chatInput.shutdown();
         }
@@ -137,6 +152,23 @@ public final class AquaWarps extends JavaPlugin {
         if (messages != null) {
             messages.shutdown();
         }
+    }
+
+    private void startMetrics() {
+        if (METRICS_ID <= 0) {
+            return;
+        }
+        this.metrics = new Metrics(this, METRICS_ID);
+        metrics.addCustomChart(new SimplePie("storage_type",
+                () -> settings.storageType().name()));
+        metrics.addCustomChart(new SimplePie("placeholderapi",
+                () -> String.valueOf(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null)));
+        metrics.addCustomChart(new SimplePie("economy",
+                () -> String.valueOf(economy != null && economy.enabled())));
+        metrics.addCustomChart(new SingleLineChart("warps",
+                () -> warps == null ? 0 : warps.total()));
+        metrics.addCustomChart(new SingleLineChart("categories",
+                () -> categories == null ? 0 : categories.all().size()));
     }
 
     private void saveDefaultResources() {

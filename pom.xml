@@ -52,6 +52,10 @@
                                     <pattern>net.kyori</pattern>
                                     <shadedPattern>com.aquaticstudios.aquawarps.lib.kyori</shadedPattern>
                                 </relocation>
+                                <relocation>
+                                    <pattern>org.bstats</pattern>
+                                    <shadedPattern>com.aquaticstudios.aquawarps.lib.bstats</shadedPattern>
+                                </relocation>
                             </relocations>
                             <filters>
                                 <filter>
@@ -129,6 +133,13 @@
             <groupId>io.github.revxrsal</groupId>
             <artifactId>zapper.api</artifactId>
             <version>1.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>3.2.1</version>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
