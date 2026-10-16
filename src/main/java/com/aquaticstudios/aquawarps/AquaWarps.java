@@ -21,6 +21,7 @@ import com.aquaticstudios.aquawarps.manager.TeleportManager;
 import com.aquaticstudios.aquawarps.manager.WarpManager;
 import com.aquaticstudios.aquawarps.menu.MenuRegistry;
 import com.aquaticstudios.aquawarps.placeholder.WarpExpansion;
+import com.aquaticstudios.aquawarps.util.CC;
 import com.aquaticstudios.aquawarps.util.Cooldowns;
 import com.aquaticstudios.aquawarps.util.NameCache;
 import com.aquaticstudios.aquawarps.util.Scheduler;
@@ -122,11 +123,11 @@ public final class AquaWarps extends JavaPlugin {
 
         startMetrics();
 
-        getLogger().info("Enabled! Storage: " + settings.storageType().display()
-                + ", menus: " + menus.names().size()
-                + ", chat: " + messages.sink().active()
-                + ", Folia: " + scheduler.isFolia()
-                + ", loading warps in the background");
+        Bukkit.getConsoleSender().sendMessage(CC.format("&#33CCFF[AquaWarps] Enabled! Storage: &f"
+                + settings.storageType().display() + "&#33CCFF, menus: &f" + menus.names().size()
+                + "&#33CCFF, chat: &f" + messages.sink().active()
+                + "&#33CCFF, Folia: &f" + scheduler.isFolia()
+                + "&#33CCFF, loading warps in the background"));
     }
 
     @Override

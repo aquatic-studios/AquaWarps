@@ -180,3 +180,11 @@ items:
       - '&#FF9E08Click to open'
     left_click_commands:
       - '[menu] admin'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-44
