@@ -1,0 +1,68 @@
+menu_title: '&8Promote Warp'
+size: 27
+
+content:
+  source: promotion_tiers
+  slots:
+    - 10-16
+  item:
+    material: NAUTILUS_SHELL
+    display_name: '%name%'
+    lore:
+      - '&7Puts your warp on top of every list.'
+      - ''
+      - '&#54ADF4Duration: &f%duration%'
+      - '&#54ADF4Price: &f%price%'
+      - '&#54ADF4Priority: &f%priority%'
+      - ''
+      - '&#54ADF4Your balance: &f%balance%'
+      - ''
+      - '&#FF9E08Click to buy'
+    left_click_commands:
+      - '[promote] %warp_name% %id%'
+      - '[refresh]'
+  empty:
+    material: BARRIER
+    display_name: '&#FFA42D&lNo tiers'
+    lore:
+      - '&7Nothing is configured in config.yml.'
+  previous:
+    material: ARROW
+    slot: 18
+    display_name: '&#54ADF4&lPrevious Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+  next:
+    material: ARROW
+    slot: 26
+    display_name: '&#54ADF4&lNext Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+
+
+items:
+  status:
+    material: CLOCK
+    slot: 4
+    display_name: '&#FFEE00&lCurrent Status'
+    lore:
+      - '%warp_promotion%'
+      - ''
+      - '&#54ADF4Warp: &f%warp_name%'
+      - '&#54ADF4Level: &f%warp_level%'
+  back:
+    material: BOOK
+    slot: 22
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the previous menu.'
+    left_click_commands:
+      - '[menu] warp_edit %warp_name%'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-26

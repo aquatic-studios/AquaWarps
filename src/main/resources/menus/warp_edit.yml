@@ -1,0 +1,281 @@
+menu_title: '&8Edit Warp'
+size: 54
+
+items:
+  display:
+    material: GRASS_BLOCK
+    slot: 4
+    display_name: '%warp_promotion_prefix%&#FFEE00&l%warp_name%'
+    lore:
+      - '&7%warp_description%'
+      - ''
+      - '&#54ADF4Category: %warp_category%'
+      - '&#54ADF4Rating: %warp_stars% &7(%warp_votes%)'
+      - '&#54ADF4Visits: &f%warp_visits% &8| &#54ADF4Saved: &f%warp_favorites%'
+      - '&#54ADF4Level: &f%warp_level% &8%warp_level_bar%'
+
+  rename:
+    material: NAME_TAG
+    slot: 10
+    display_name: '&#FFEE00&lRename'
+    lore:
+      - '&7Current: &f%warp_name%'
+      - ''
+      - '&#FF9E08Click to write a new name'
+    left_click_commands:
+      - '[input] rename warp_edit'
+
+  description:
+    material: WRITABLE_BOOK
+    slot: 11
+    display_name: '&#FFEE00&lDescription'
+    lore:
+      - '&7%warp_description%'
+      - ''
+      - '&#FF9E08Left click to add a line'
+      - '&#FF2D2DRight click to clear'
+    left_click_commands:
+      - '[input] description warp_edit'
+    right_click_commands:
+      - '[clear-description] %warp_name%'
+      - '[refresh]'
+
+  category:
+    material: CHEST
+    slot: 12
+    display_name: '&#FFEE00&lCategory'
+    lore:
+      - '&7Current: %warp_category%'
+      - ''
+      - '&#FF9E08Click to change'
+    left_click_commands:
+      - '[menu] warp_categories %warp_name%'
+
+  icon:
+    material: ITEM_FRAME
+    slot: 13
+    display_name: '&#FFEE00&lIcon'
+    lore:
+      - '&7Current: &f%warp_icon%'
+      - ''
+      - '&#FF9E08Left click to pick from a list'
+      - '&#FF9E08Right click to use the item in hand'
+    left_click_commands:
+      - '[menu] warp_icons %warp_name%'
+    right_click_commands:
+      - '[hand-icon] %warp_name%'
+      - '[refresh]'
+
+  relocate:
+    material: COMPASS
+    slot: 14
+    display_name: '&#FFEE00&lRelocate'
+    lore:
+      - '&7Move the warp to where you stand.'
+      - ''
+      - '&#54ADF4World: &f%warp_world%'
+      - ''
+      - '&#FF9E08Click to relocate'
+    left_click_commands:
+      - '[relocate] %warp_name%'
+      - '[refresh]'
+
+  tags:
+    material: OAK_SIGN
+    slot: 15
+    display_name: '&#FFEE00&lTags'
+    lore:
+      - '&7Tags: %warp_tags%'
+      - ''
+      - '&#54ADF4Used: &f%warp_tag_count%'
+      - ''
+      - '&#FF9E08Left click to add a tag'
+      - '&#FF2D2DRight click to remove the last one'
+    left_click_commands:
+      - '[input] tag warp_edit'
+    right_click_commands:
+      - '[remove-tag] %warp_name%'
+      - '[refresh]'
+
+  access:
+    material: IRON_DOOR
+    slot: 16
+    display_name: '&#FFEE00&lPrivacy'
+    lore:
+      - '&7Who is allowed to enter your warp.'
+      - ''
+      - '&#54ADF4Privacy:'
+      - '%warp_access_list%'
+      - ''
+      - '&#FF9E08Click to change'
+    left_click_commands:
+      - '[access] %warp_name%'
+      - '[refresh]'
+
+  password:
+    material: TRIPWIRE_HOOK
+    slot: 19
+    display_name: '&#FFEE00&lPassword'
+    lore:
+      - '&7Privacy: %warp_access%'
+      - ''
+      - '&#FF9E08Left click to set a password'
+      - '&#FF2D2DRight click to remove it'
+    left_click_commands:
+      - '[input] password warp_edit'
+    right_click_commands:
+      - '[clear-password] %warp_name%'
+      - '[refresh]'
+
+  fee:
+    material: GOLD_INGOT
+    slot: 20
+    display_name: '&#FFEE00&lEntry Fee'
+    lore:
+      - '&7Current: %warp_fee%'
+      - ''
+      - '&#FF9E08Click to change'
+    left_click_commands:
+      - '[input] fee warp_edit'
+
+  state:
+    material: LEVER
+    slot: 21
+    display_name: '&#FFEE00&lOpen to public'
+    lore:
+      - '&7Close it while you are building.'
+      - ''
+      - '&#54ADF4State:'
+      - '%warp_state_list%'
+      - ''
+      - '&#FF9E08Click to change'
+    left_click_commands:
+      - '[toggle] %warp_name%'
+      - '[refresh]'
+
+  trusted:
+    material: PLAYER_HEAD
+    slot: 22
+    display_name: '&#FFEE00&lTrusted Players'
+    lore:
+      - '&7They can enter even when the warp'
+      - '&7is private or closed.'
+      - ''
+      - '&#54ADF4Total: &f%warp_trusted_count%'
+      - ''
+      - '&#FF9E08Click to manage'
+    left_click_commands:
+      - '[menu] warp_trusted %warp_name%'
+
+  bans:
+    material: BARRIER
+    slot: 23
+    display_name: '&#FF2D2D&lBanned Players'
+    lore:
+      - '&7They can never enter this warp.'
+      - ''
+      - '&#54ADF4Total: &f%warp_banned_count%'
+      - ''
+      - '&#FF9E08Click to manage'
+    left_click_commands:
+      - '[menu] warp_bans %warp_name%'
+
+  particles:
+    material: FIREWORK_ROCKET
+    slot: 24
+    display_name: '&#FFEE00&lArrival Effect'
+    lore:
+      - '&7Current: &f%warp_particle%'
+      - ''
+      - '&#FF9E08Click to change'
+    left_click_commands:
+      - '[menu] warp_particles %warp_name%'
+
+  promote:
+    material: NAUTILUS_SHELL
+    slot: 25
+    display_name: '&#FFEE00&lPromote'
+    lore:
+      - '&7%warp_promotion%'
+      - ''
+      - '&7Promoted warps sit on top of'
+      - '&7every list on the server.'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] warp_promote %warp_name%'
+
+  stats:
+    material: PAPER
+    slot: 31
+    display_name: '&#FFEE00&lStatistics'
+    lore:
+      - '&#54ADF4Visits: &f%warp_visits%'
+      - '&#54ADF4Unique visitors: &f%warp_unique_visits%'
+      - '&#54ADF4Last 7 days: &f%warp_recent_visits%'
+      - '&#54ADF4Saved by: &f%warp_favorites%'
+      - '&#54ADF4Rating: %warp_stars% &7(%warp_votes%)'
+      - '&#54ADF4Level: &f%warp_level% &8%warp_level_bar%'
+      - '&#54ADF4Pearls today: &f%warp_pearls_today%'
+      - '&#54ADF4Reports: &f%warp_reports%'
+
+  reviews:
+    material: BOOK
+    slot: 30
+    display_name: '&#FFEE00&lReviews'
+    lore:
+      - '&7Read what your visitors think.'
+      - ''
+      - '&#54ADF4Reviews: &f%warp_votes%'
+      - ''
+      - '&#FF9E08Click to read'
+    left_click_commands:
+      - '[reviews] %warp_name%'
+
+  visit:
+    material: ENDER_PEARL
+    slot: 32
+    display_name: '&#56FF00&lVisit'
+    lore:
+      - '&7Travel to your own warp.'
+      - ''
+      - '&#FF9E08Click to travel'
+    left_click_commands:
+      - '[warp] %warp_name%'
+
+  delete:
+    material: LAVA_BUCKET
+    slot: 40
+    display_name: '&#FF2D2D&lDelete Warp'
+    lore:
+      - '&7This cannot be undone.'
+      - ''
+      - '&#FF9E08Click to confirm'
+    left_click_commands:
+      - '[menu] warp_delete %warp_name%'
+
+  back:
+    material: BOOK
+    slot: 45
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to your warps.'
+    left_click_commands:
+      - '[menu] my_warps'
+
+  close:
+    material: BARRIER
+    slot: 53
+    display_name: '&#FF2D2D&lClose'
+    lore:
+      - '&7Close this menu.'
+    left_click_commands:
+      - '[close]'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-53

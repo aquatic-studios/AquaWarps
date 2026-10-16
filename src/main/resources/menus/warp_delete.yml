@@ -1,0 +1,40 @@
+menu_title: '&8Delete Warp'
+size: 27
+
+items:
+  info:
+    material: PAPER
+    slot: 13
+    display_name: '&#FF2D2D&lDelete %warp_name%?'
+    lore:
+      - '&7You are about to delete &f%warp_name%'
+      - '&7with &f%warp_visits% &7visits and'
+      - '&f%warp_votes% &7ratings.'
+      - ''
+      - '&#FF2D2DThis cannot be undone.'
+
+  accept:
+    material: LIME_CONCRETE
+    slot: 11
+    display_name: '&#56FF00&lConfirm'
+    lore:
+      - '&7Delete this warp forever.'
+    left_click_commands:
+      - '[delete] %warp_name%'
+
+  cancel:
+    material: RED_CONCRETE
+    slot: 15
+    display_name: '&#FF2D2D&lCancel'
+    lore:
+      - '&7Keep the warp.'
+    left_click_commands:
+      - '[menu] warp_edit %warp_name%'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-26

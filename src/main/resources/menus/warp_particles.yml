@@ -1,0 +1,50 @@
+menu_title: '&8Arrival Effect'
+size: 54
+
+content:
+  source: particles
+  slots:
+    - 10-16
+    - 19-25
+    - 28-34
+  item:
+    material: FIREWORK_ROCKET
+    display_name: '&#FFEE00&l%name%'
+    lore:
+      - '%selected%'
+      - ''
+      - '&#FF9E08Click to use this effect'
+    left_click_commands:
+      - '[particle] %warp_name% %id%'
+      - '[refresh]'
+  previous:
+    material: ARROW
+    slot: 48
+    display_name: '&#54ADF4&lPrevious Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+  next:
+    material: ARROW
+    slot: 50
+    display_name: '&#54ADF4&lNext Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+
+
+items:
+  back:
+    material: BOOK
+    slot: 49
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the previous menu.'
+    left_click_commands:
+      - '[menu] warp_edit %warp_name%'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-53

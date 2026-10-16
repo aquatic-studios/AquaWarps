@@ -1,0 +1,75 @@
+menu_title: '&8Administration'
+permission: 'aquawarps.admin'
+size: 45
+
+items:
+  reports:
+    material: REDSTONE_TORCH
+    slot: 10
+    permission: 'aquawarps.admin'
+    display_name: '&#FF2D2D&lReports'
+    lore:
+      - '&7Review what players reported.'
+      - ''
+      - '&#54ADF4Pending: &f%aquawarps_reports%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] reports'
+
+  all_warps:
+    material: COMPASS
+    slot: 11
+    permission: 'aquawarps.admin'
+    display_name: '&#FFEE00&lAll Warps'
+    lore:
+      - '&7Every warp, private and hidden'
+      - '&7ones included.'
+      - ''
+      - '&#54ADF4Total: &f%aquawarps_total%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] all_warps'
+
+  stats:
+    material: PAPER
+    slot: 12
+    permission: 'aquawarps.admin'
+    display_name: '&#FFEE00&lStatistics'
+    lore:
+      - '&#54ADF4Warps: &f%aquawarps_total%'
+      - '&#54ADF4Promoted: &f%aquawarps_promoted%'
+      - '&#54ADF4Hidden: &f%aquawarps_hidden%'
+      - '&#54ADF4Categories: &f%aquawarps_categories%'
+      - '&#54ADF4Pending reports: &f%aquawarps_reports%'
+
+  purge:
+    material: LAVA_BUCKET
+    slot: 13
+    permission: 'aquawarps.admin'
+    display_name: '&#FF2D2D&lPurge Inactive'
+    lore:
+      - '&7Delete warps whose owners have'
+      - '&7not logged in for a long time.'
+      - ''
+      - '&#FF9E08Click to write the days'
+    left_click_commands:
+      - '[input] purge admin'
+
+  back:
+    material: BOOK
+    slot: 40
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the main menu.'
+    left_click_commands:
+      - '[menu] main'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-44

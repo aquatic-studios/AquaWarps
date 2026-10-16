@@ -1,0 +1,69 @@
+menu_title: '&8Recent Stamps'
+size: 54
+
+content:
+  source: stamps
+  slots:
+    - 0-44
+  item:
+    material: GRASS_BLOCK
+    display_name: '%promotion_prefix%&#FFEE00&l%name%'
+    lore:
+      - '&7by &f%owner%'
+      - ''
+      - '&7%description%'
+      - ''
+      - '&#54ADF4Category: %category%'
+      - '&#54ADF4Rating: %stars% &7(%votes%)'
+      - '&#54ADF4Visits: &f%visits% &8| &#54ADF4Saved: &f%favorites%'
+      - '&#54ADF4Level: &f%level% &8%level_bar%'
+      - '&#54ADF4Tags: %tags%'
+      - '&#54ADF4World: &f%world%'
+      - '%promotion%'
+      - ''
+      - '&#FF9E08Left click to travel'
+      - '&#FF9E08Right click for details'
+      - '&#FF9E08Shift + left click to save'
+    left_click_commands:
+      - '[warp] %name%'
+    right_click_commands:
+      - '[menu] warp_info %name%'
+    shift_left_click_commands:
+      - '[favorite] %name%'
+      - '[refresh]'
+  empty:
+    material: STRUCTURE_VOID
+    display_name: '&#FFA42D&lNo warps'
+    lore:
+      - '&7Nothing matches these filters yet.'
+  previous:
+    material: ARROW
+    slot: 48
+    display_name: '&#54ADF4&lPrevious Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+  next:
+    material: ARROW
+    slot: 50
+    display_name: '&#54ADF4&lNext Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+
+
+items:
+  back:
+    material: BOOK
+    slot: 49
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the previous menu.'
+    left_click_commands:
+      - '[menu] passport'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-53

@@ -1,0 +1,141 @@
+menu_title: '&8Warp Info'
+size: 45
+
+items:
+  display:
+    material: GRASS_BLOCK
+    slot: 13
+    display_name: '%warp_promotion_prefix%&#FFEE00&l%warp_name%'
+    lore:
+      - '&7%warp_description%'
+      - ''
+      - '&#54ADF4Category: %warp_category%'
+      - '&#54ADF4Tags: %warp_tags%'
+      - '&#54ADF4World: &f%warp_world%'
+      - '&#54ADF4Privacy: %warp_access% &8| &#54ADF4State: %warp_state%'
+      - '&#54ADF4Entry fee: %warp_fee%'
+      - '%warp_promotion%'
+
+  owner:
+    material: PLAYER_HEAD
+    slot: 4
+    head: '%warp_owner%'
+    display_name: '&#FFEE00&l%warp_owner%'
+    lore:
+      - '&7Owner of this warp.'
+      - ''
+      - '&#54ADF4Created: &f%warp_created%'
+      - '&#54ADF4Trusted players: &f%warp_trusted_count%'
+
+  stats:
+    material: PAPER
+    slot: 22
+    display_name: '&#FFEE00&lStatistics'
+    lore:
+      - '&#54ADF4Visits: &f%warp_visits%'
+      - '&#54ADF4Unique visitors: &f%warp_unique_visits%'
+      - '&#54ADF4Last 7 days: &f%warp_recent_visits%'
+      - '&#54ADF4Saved by: &f%warp_favorites%'
+      - '&#54ADF4Rating: %warp_stars% &7(%warp_votes%)'
+      - '&#54ADF4Level: &f%warp_level% &8%warp_level_bar%'
+      - '&#54ADF4Experience: &f%warp_experience%&7/&f%warp_experience_next%'
+      - '&#54ADF4Trending position: &f%warp_trend%'
+
+  teleport:
+    material: ENDER_PEARL
+    slot: 29
+    display_name: '&#56FF00&lTravel'
+    lore:
+      - '&7Take the current to this warp.'
+      - ''
+      - '&#54ADF4Entry fee: %warp_fee%'
+      - ''
+      - '&#FF9E08Click to travel'
+    left_click_commands:
+      - '[warp] %warp_name%'
+
+  favorite:
+    material: NETHER_STAR
+    slot: 30
+    display_name: '&#FFEE00&lFavourite'
+    lore:
+      - '&7State: %warp_favorite%'
+      - ''
+      - '&#FF9E08Click to toggle'
+    left_click_commands:
+      - '[favorite] %warp_name%'
+      - '[refresh]'
+
+  rate:
+    material: SUNFLOWER
+    slot: 32
+    display_name: '&#FFEE00&lRate'
+    lore:
+      - '&7Average: %warp_stars% &7(%warp_votes%)'
+      - '&7Your vote: %warp_your_rating%'
+      - ''
+      - '&#FF9E08Click to rate'
+    left_click_commands:
+      - '[menu] warp_rate %warp_name%'
+
+  reviews:
+    material: BOOK
+    slot: 33
+    display_name: '&#FFEE00&lReviews'
+    lore:
+      - '&7Read what other visitors think.'
+      - ''
+      - '&#54ADF4Reviews: &f%warp_votes%'
+      - ''
+      - '&#FF9E08Click to read'
+    left_click_commands:
+      - '[reviews] %warp_name%'
+
+  report:
+    material: REDSTONE_TORCH
+    slot: 35
+    display_name: '&#FF2D2D&lReport'
+    lore:
+      - '&7Tell the staff if this warp'
+      - '&7breaks the rules.'
+      - ''
+      - '&#FF9E08Click to report'
+    left_click_commands:
+      - '[menu] warp_report %warp_name%'
+
+  edit:
+    material: WRITABLE_BOOK
+    slot: 31
+    display_name: '&#FFEE00&lEdit Warp'
+    lore:
+      - '&7Manage this warp.'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] warp_edit %warp_name%'
+
+  back:
+    material: BOOK
+    slot: 36
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the warp list.'
+    left_click_commands:
+      - '[menu] browse'
+
+  close:
+    material: BARRIER
+    slot: 44
+    display_name: '&#FF2D2D&lClose'
+    lore:
+      - '&7Close this menu.'
+    left_click_commands:
+      - '[close]'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-44

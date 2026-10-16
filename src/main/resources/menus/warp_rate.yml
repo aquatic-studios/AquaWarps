@@ -1,0 +1,114 @@
+menu_title: '&8Rate Warp'
+size: 27
+
+items:
+  display:
+    material: SUNFLOWER
+    slot: 4
+    display_name: '&#FFEE00&l%warp_name%'
+    lore:
+      - '&7by &f%warp_owner%'
+      - ''
+      - '&#54ADF4Average: %warp_stars% &f%warp_rating%'
+      - '&#54ADF4Votes: &f%warp_votes%'
+      - '&#54ADF4Your vote: %warp_your_rating%'
+
+  one:
+    material: LIGHT_GRAY_DYE
+    slot: 11
+    display_name: '&#FFEE00&l1 star'
+    lore:
+      - '&7Not worth the trip.'
+      - ''
+      - '&#FF9E08Click to vote'
+    left_click_commands:
+      - '[rate] %warp_name% 1'
+      - '[refresh]'
+
+  two:
+    material: LIGHT_GRAY_DYE
+    slot: 12
+    display_name: '&#FFEE00&l2 stars'
+    lore:
+      - '&7Could be better.'
+      - ''
+      - '&#FF9E08Click to vote'
+    left_click_commands:
+      - '[rate] %warp_name% 2'
+      - '[refresh]'
+
+  three:
+    material: YELLOW_DYE
+    slot: 13
+    display_name: '&#FFEE00&l3 stars'
+    lore:
+      - '&7Solid warp.'
+      - ''
+      - '&#FF9E08Click to vote'
+    left_click_commands:
+      - '[rate] %warp_name% 3'
+      - '[refresh]'
+
+  four:
+    material: YELLOW_DYE
+    slot: 14
+    display_name: '&#FFEE00&l4 stars'
+    lore:
+      - '&7Really good.'
+      - ''
+      - '&#FF9E08Click to vote'
+    left_click_commands:
+      - '[rate] %warp_name% 4'
+      - '[refresh]'
+
+  five:
+    material: YELLOW_DYE
+    slot: 15
+    display_name: '&#FFEE00&l5 stars'
+    lore:
+      - '&7A must visit.'
+      - ''
+      - '&#FF9E08Click to vote'
+    left_click_commands:
+      - '[rate] %warp_name% 5'
+      - '[refresh]'
+
+  comment:
+    material: WRITABLE_BOOK
+    slot: 21
+    display_name: '&#FFEE00&lWrite a review'
+    lore:
+      - '&7Tell others what you found there.'
+      - ''
+      - '&#FF9E08Click to write'
+    left_click_commands:
+      - '[input] comment warp_rate'
+
+  remove:
+    material: BARRIER
+    slot: 23
+    display_name: '&#FF2D2D&lRemove my vote'
+    lore:
+      - '&7Take your rating back.'
+      - ''
+      - '&#FF9E08Click to remove'
+    left_click_commands:
+      - '[unrate] %warp_name%'
+      - '[refresh]'
+
+  back:
+    material: BOOK
+    slot: 18
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the warp.'
+    left_click_commands:
+      - '[menu] warp_info %warp_name%'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-26

@@ -1,0 +1,103 @@
+menu_title: '&8Rankings'
+size: 36
+
+items:
+  rated:
+    material: SUNFLOWER
+    slot: 10
+    display_name: '&#FFEE00&lBest Rated'
+    lore:
+      - '&7The warps the community loves.'
+      - ''
+      - '&#54ADF4Top warp: &f%aquawarps_top_rating_1_name%'
+      - '&#54ADF4Rating: &f%aquawarps_top_rating_1_rating%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] top_rated'
+
+  visits:
+    material: ENDER_EYE
+    slot: 11
+    display_name: '&#FFEE00&lMost Visited'
+    lore:
+      - '&7The busiest warps on the server.'
+      - ''
+      - '&#54ADF4Top warp: &f%aquawarps_top_visits_1_name%'
+      - '&#54ADF4Visits: &f%aquawarps_top_visits_1_visits%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] top_visits'
+
+  favorites:
+    material: NETHER_STAR
+    slot: 12
+    display_name: '&#FFEE00&lMost Saved'
+    lore:
+      - '&7The warps players keep coming back to.'
+      - ''
+      - '&#54ADF4Top warp: &f%aquawarps_top_favorites_1_name%'
+      - '&#54ADF4Saved: &f%aquawarps_top_favorites_1_favorites%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] top_favorites'
+
+  level:
+    material: EXPERIENCE_BOTTLE
+    slot: 13
+    display_name: '&#FFEE00&lHighest Level'
+    lore:
+      - '&7Warps grow with every visit,'
+      - '&7rating and favourite.'
+      - ''
+      - '&#54ADF4Top warp: &f%aquawarps_top_level_1_name%'
+      - '&#54ADF4Level: &f%aquawarps_top_level_1_level%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] top_level'
+
+  newest:
+    material: CLOCK
+    slot: 14
+    display_name: '&#FFEE00&lNewest'
+    lore:
+      - '&7The warps that just opened.'
+      - ''
+      - '&#54ADF4Total warps: &f%aquawarps_total%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] newest'
+
+  trending:
+    material: HEART_OF_THE_SEA
+    slot: 15
+    display_name: '&#FFEE00&lThe Current'
+    lore:
+      - '&7What is hot right now.'
+      - ''
+      - '&#54ADF4Top warp: &f%aquawarps_top_trending_1_name%'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] trending'
+
+  back:
+    material: BOOK
+    slot: 31
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the main menu.'
+    left_click_commands:
+      - '[menu] main'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-35

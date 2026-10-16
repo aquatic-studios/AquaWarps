@@ -1,0 +1,49 @@
+menu_title: '&8Sort Warps'
+size: 45
+
+content:
+  source: sort_modes
+  slots:
+    - 10-16
+    - 19-25
+  item:
+    material: GRAY_DYE
+    display_name: '&#FFEE00&l%name%'
+    lore:
+      - '%selected%'
+      - ''
+      - '&#FF9E08Click to use this order'
+    left_click_commands:
+      - '[sort] %id%'
+      - '[menu] browse'
+  previous:
+    material: ARROW
+    slot: 38
+    display_name: '&#54ADF4&lPrevious Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+  next:
+    material: ARROW
+    slot: 42
+    display_name: '&#54ADF4&lNext Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+
+
+items:
+  back:
+    material: BOOK
+    slot: 40
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the previous menu.'
+    left_click_commands:
+      - '[menu] browse'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-44

@@ -1,0 +1,101 @@
+menu_title: '&8My Warps'
+size: 54
+
+content:
+  source: my_warps
+  slots:
+    - 0-44
+  item:
+    material: GRASS_BLOCK
+    display_name: '%promotion_prefix%&#FFEE00&l%name%'
+    lore:
+      - '&7%description%'
+      - ''
+      - '&#54ADF4Category: %category%'
+      - '&#54ADF4Rating: %stars% &7(%votes%)'
+      - '&#54ADF4Visits: &f%visits% &8| &#54ADF4Saved: &f%favorites%'
+      - '&#54ADF4Level: &f%level% &8%level_bar%'
+      - '&#54ADF4Privacy: %access% &8| &#54ADF4State: %state%'
+      - '&#54ADF4Fee: %fee%'
+      - '%promotion%'
+      - ''
+      - '&#FF9E08Left click to edit'
+      - '&#FF9E08Right click to travel'
+    left_click_commands:
+      - '[menu] warp_edit %name%'
+    right_click_commands:
+      - '[warp] %name%'
+  empty:
+    material: WRITABLE_BOOK
+    display_name: '&#FFA42D&lNo warps yet'
+    lore:
+      - '&7Create your first one with the'
+      - '&7button below.'
+  previous:
+    material: ARROW
+    slot: 48
+    display_name: '&#54ADF4&lPrevious Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+  next:
+    material: ARROW
+    slot: 50
+    display_name: '&#54ADF4&lNext Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+
+
+items:
+  back:
+    material: BOOK
+    slot: 49
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the main menu.'
+    left_click_commands:
+      - '[menu] main'
+  create:
+    material: EMERALD
+    slot: 47
+    display_name: '&#56FF00&lCreate Warp'
+    lore:
+      - '&7Create a warp where you stand.'
+      - ''
+      - '&#54ADF4Slots: &f%aquawarps_warps%&7/&f%aquawarps_limit%'
+      - '&#54ADF4Cost: &f%aquawarps_create_cost%'
+      - ''
+      - '&#FF9E08Click to create'
+    left_click_commands:
+      - '[input] create my_warps'
+
+  buy_slot:
+    material: ENDER_CHEST
+    slot: 51
+    display_name: '&#FFEE00&lBuy Slot'
+    lore:
+      - '&7Buy one more warp slot.'
+      - ''
+      - '&#54ADF4Extra slots: &f%aquawarps_extra_slots%&7/&f%aquawarps_max_extra_slots%'
+      - '&#54ADF4Price: &f%aquawarps_slot_cost%'
+      - ''
+      - '&#FF9E08Click to buy'
+    left_click_commands:
+      - '[buy-slot]'
+      - '[refresh]'
+
+  close:
+    material: BARRIER
+    slot: 53
+    display_name: '&#FF2D2D&lClose'
+    lore:
+      - '&7Close this menu.'
+    left_click_commands:
+      - '[close]'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-53

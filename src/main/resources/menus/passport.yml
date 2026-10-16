@@ -1,0 +1,74 @@
+menu_title: '&8Passport'
+size: 54
+
+content:
+  source: milestones
+  slots:
+    - 19-25
+    - 28-34
+  item:
+    material: GRAY_DYE
+    display_name: '&#FFEE00&l%amount% warps'
+    lore:
+      - '&#54ADF4Reward: &f%pearls% pearls'
+      - '%extra%'
+      - ''
+      - '%state%'
+  empty:
+    material: FILLED_MAP
+    display_name: '&#FFA42D&lNo milestones'
+    lore:
+      - '&7Nothing is configured in config.yml.'
+  previous:
+    material: ARROW
+    slot: 48
+    display_name: '&#54ADF4&lPrevious Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+  next:
+    material: ARROW
+    slot: 50
+    display_name: '&#54ADF4&lNext Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+
+
+items:
+  back:
+    material: BOOK
+    slot: 49
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the main menu.'
+    left_click_commands:
+      - '[menu] main'
+  summary:
+    material: FILLED_MAP
+    slot: 4
+    display_name: '&#FFEE00&lTravel Log'
+    lore:
+      - '&#54ADF4Stamps: &f%aquawarps_stamps%'
+      - '&#54ADF4Rank: %aquawarps_rank%'
+      - '&#54ADF4Next rank: %aquawarps_next_rank%'
+      - '&#54ADF4Pearls: &f%aquawarps_pearls%'
+      - ''
+      - '%aquawarps_rank_progress%'
+
+  recent:
+    material: CLOCK
+    slot: 47
+    display_name: '&#FFEE00&lRecent Stamps'
+    lore:
+      - '&7The last warps you discovered.'
+      - ''
+      - '&#FF9E08Click to open'
+    left_click_commands:
+      - '[menu] stamps'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-53

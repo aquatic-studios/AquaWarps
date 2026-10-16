@@ -1,0 +1,59 @@
+menu_title: '&8Warp Icon'
+size: 54
+
+content:
+  source: icons
+  slots:
+    - 0-44
+  item:
+    material: PAPER
+    display_name: '&#FFEE00&l%name%'
+    lore:
+      - '%selected%'
+      - ''
+      - '&#FF9E08Click to use this icon'
+    left_click_commands:
+      - '[icon] %warp_name% %id%'
+      - '[refresh]'
+  previous:
+    material: ARROW
+    slot: 48
+    display_name: '&#54ADF4&lPrevious Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+  next:
+    material: ARROW
+    slot: 50
+    display_name: '&#54ADF4&lNext Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+
+
+items:
+  hand:
+    material: ITEM_FRAME
+    slot: 47
+    display_name: '&#56FF00&lUse item in hand'
+    lore:
+      - '&7Hold any item and click here.'
+      - ''
+      - '&#FF9E08Click to apply'
+    left_click_commands:
+      - '[hand-icon] %warp_name%'
+      - '[refresh]'
+  back:
+    material: BOOK
+    slot: 49
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the previous menu.'
+    left_click_commands:
+      - '[menu] warp_edit %warp_name%'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-53

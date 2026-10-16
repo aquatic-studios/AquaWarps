@@ -1,0 +1,440 @@
+storage:
+  type: SQLITE # SQLITE, MYSQL, MARIADB, H2
+
+  # only read when type is MYSQL or MARIADB, needs restart
+  mysql:
+    host: localhost
+    port: 3306
+    database: aquawarps
+    username: root
+    password: ''
+    ssl: false
+
+warp:
+  name:
+    # length of the name a player types when creating a warp
+    min-length: 3
+    max-length: 16
+
+    # characters a name may contain, regex, keep it strict: names are typed in commands
+    pattern: '^[a-zA-Z0-9_]+$'
+
+    # names nobody can take, case insensitive
+    blacklist:
+      - spawn
+      - admin
+      - staff
+      - server
+
+  description:
+    # description lines every warp gets, the DESCRIPTION_LINE perk adds one more on top of this
+    max-lines: 4
+    max-length: 64
+
+  tags:
+    # #tags an owner attaches to a warp, players can search by them
+    enabled: true
+
+    # tags every warp gets, the TAG_SLOT perk adds one more on top of this
+    max: 5
+    max-length: 12
+
+  limits:
+    # warps a player can own with no permission
+    default: 3
+
+    # highest matching permission wins, they are not added together
+    permissions:
+      aquawarps.limit.vip: 5
+      aquawarps.limit.mvp: 8
+      aquawarps.limit.legend: 12
+
+  # worlds where warps cannot be created, existing ones keep working
+  blocked-worlds: []
+
+  # blocks a new warp must keep from someone else's warp in the same world, 0 disables it
+  # bypass with aquawarps.admin
+  min-distance: 0
+
+  # look for solid ground and air above before dropping the player, off means exact coordinates
+  safe-teleport: true
+
+  # only allow travelling to a warp while its owner is connected
+  require-owner-online: false
+
+  # delete warps whose owner has not logged in for this many days, checked once a day, 0 disables it
+  # caution: this deletes warps permanently, ratings and favourites go with them
+  # /aquawarps admin purge <days> does the same on demand
+  delete-after-inactive-days: 0
+
+teleport:
+  # seconds standing still before the travel happens, 0 teleports instantly
+  # bypass with aquawarps.bypass.warmup
+  warmup-seconds: 3
+
+  # what interrupts that countdown
+  cancel-on-move: true
+  cancel-on-damage: true
+
+  # seconds between one travel and the next, bypass with aquawarps.bypass.cooldown
+  cooldown-seconds: 10
+
+  # where the countdown is drawn
+  countdown-actionbar: true
+  countdown-title: true
+
+  # played while the countdown runs and again on arrival, NONE or "" disables one
+  warmup-particle: WATER_WAKE
+  warmup-sound: BLOCK_NOTE_BLOCK_BIT
+  arrive-particle: WATER_SPLASH
+  arrive-sound: ENTITY_DOLPHIN_SPLASH
+
+  # /aquawarps back returns to where the player was before the last travel
+  enable-back: true
+
+economy:
+  # off makes everything free, the prices below are ignored
+  enabled: true
+
+  # VAULT charges real server money and needs Vault installed, PEARLS charges the currency below
+  provider: VAULT # VAULT, PEARLS
+
+  # charged to the owner, 0 makes that action free
+  create-cost: 1000.0
+  rename-cost: 250.0
+  relocate-cost: 100.0
+
+  extra-slot:
+    # price of a warp slot bought on top of the permission limit
+    cost: 5000.0
+
+    # each slot already bought multiplies the next one, 1.0 keeps the price flat
+    multiplier: 1.75
+
+    # slots a player can buy in total
+    max: 5
+
+  fee:
+    # highest entry fee an owner can charge visitors
+    max: 5000.0
+
+    # cut the server keeps from every fee, the rest goes to the owner
+    tax-percent: 5.0
+
+pearls:
+  # the plugin's own currency, earned by visiting and rating, spent on promotions
+  enabled: true
+
+  # shown next to every amount
+  name: 'Pearls'
+
+  # given once, the first time a player is loaded
+  starting-amount: 50.0
+
+  # paid to the owner of the warp
+  reward-unique-visit: 2.0
+  reward-rating: 5.0
+  reward-favorite: 3.0
+
+  # paid to the visitor instead, the first time they set foot in a warp
+  reward-visitor-discovery: 1.0
+
+  # most a single warp can earn per day from those rewards, 0 disables the cap
+  daily-cap: 100.0
+
+rating:
+  # star ratings on warps, off hides the rate menus
+  enabled: true
+
+  # let players leave a written review next to the stars
+  comments: true
+  comment-max-length: 80
+
+  # only players who have travelled to the warp may rate it
+  require-visit: true
+
+  # stop owners rating their own warps
+  block-self: true
+
+  # hours a player must wait before changing a rating they already left
+  change-cooldown-hours: 24
+
+  # ratings a warp needs before it can appear in the top rated menu, stops a single 5 star from winning
+  minimum-for-top: 3
+
+  # newest reviews kept per warp, minimum 9
+  reviews-shown: 45
+
+promotion:
+  # owners pay to push their warp to the top of the listings
+  enabled: true
+
+  # promoted warps allowed at once, nobody can buy a promotion while it is full, 0 means unlimited
+  max-active: 12
+
+  # PEARLS uses the currency above, VAULT charges real server money
+  currency: PEARLS # PEARLS, VAULT
+
+  # add or remove tiers freely, the key is the id used internally
+  tiers:
+    current:
+      display: '&#54ADF4&lCurrent'
+      material: PRISMARINE_SHARD
+
+      # higher sits above the other promoted warps
+      priority: 1
+      duration-hours: 24
+      price: 150.0
+
+      # enchant glint on the warp icon
+      glow: false
+    tide:
+      display: '&#00C6FF&lTide'
+      material: HEART_OF_THE_SEA
+      priority: 2
+      duration-hours: 72
+      price: 400.0
+      glow: true
+    tsunami:
+      display: '&#FFEE00&lTsunami'
+      material: NAUTILUS_SHELL
+      priority: 3
+      duration-hours: 168
+      price: 1200.0
+      glow: true
+
+# score behind the trending menu and the default sort
+trending:
+  # only visits from the last days count
+  window-days: 7
+
+  # how much each thing adds to the score
+  visit-weight: 1.0
+  unique-weight: 2.5
+  rating-weight: 8.0
+  favorite-weight: 4.0
+
+  # what a visit is worth after a day, 0.82 means it keeps 82% each day, 1.0 never fades
+  decay-per-day: 0.82
+
+  # minutes between recalculations, lower is heavier on a big server
+  recalculate-minutes: 5
+
+level:
+  # warps gain experience and level up, off hides levels everywhere
+  enabled: true
+  max-level: 25
+
+  # experience for the next level is base * (level - 1) ^ exponent
+  base: 100
+  exponent: 1.45
+
+  # experience given to the warp
+  experience:
+    visit: 3
+    unique-visit: 10
+    rating: 25
+    favorite: 15
+
+  # unlocked at each level and kept for good
+  # DESCRIPTION_LINE = one more description line, TAG_SLOT = one more tag
+  # CUSTOM_ICON = pick the menu icon, PARTICLE = effect on arrival
+  # GLOW = glint on the icon, DISCOUNT = cheaper promotions
+  perks:
+    3:
+      - DESCRIPTION_LINE
+    5:
+      - CUSTOM_ICON
+      - TAG_SLOT
+    8:
+      - DESCRIPTION_LINE
+      - PARTICLE
+    12:
+      - TAG_SLOT
+    15:
+      - DESCRIPTION_LINE
+      - GLOW
+    20:
+      - TAG_SLOT
+      - DISCOUNT
+
+passport:
+  # a stamp per warp visited for the first time, the passport menu collects them
+  enabled: true
+
+  # rewards at that number of stamps, claimed once, %player% is the visitor
+  milestones:
+    5:
+      pearls: 25.0
+      commands: []
+    15:
+      pearls: 75.0
+      commands: []
+    30:
+      pearls: 150.0
+      commands: []
+    50:
+      pearls: 300.0
+      commands:
+        - 'give %player% heart_of_the_sea 1'
+    100:
+      pearls: 750.0
+      commands:
+        - 'give %player% nautilus_shell 4'
+
+  # title shown from that many stamps until the next entry, keep a 0 so everyone has one
+  ranks:
+    0: '&7Drifter'
+    10: '&#54ADF4Navigator'
+    25: '&#00C6FFCorsair'
+    50: '&#FFA42DCaptain'
+    100: '&#FFEE00&lLegend of the Sea'
+
+moderation:
+  # players can report a warp from its menu
+  reports: true
+
+  # reasons offered in the report menu
+  reasons:
+    - 'Inappropriate content'
+    - 'Trap warp'
+    - 'Advertising'
+    - 'Offensive name'
+    - 'Other'
+
+  # hide a warp automatically once it reaches this many reports, 0 disables it
+  # hidden is not deleted, staff can put it back from /aquawarps admin reports
+  auto-hide-after: 5
+
+  # tell everyone with aquawarps.staff when a report comes in
+  notify-staff: true
+
+  # minutes before the same player can report again
+  cooldown-minutes: 5
+
+listing:
+  # order used when a menu is opened, players can change it from the sort hopper
+  default-sort: TRENDING # TRENDING, RATING, VISITS, NEWEST, OLDEST, ALPHABETICAL, FAVORITES, LEVEL
+
+  # promoted warps sit above everything else whatever the sort is
+  promoted-first: true
+
+  # keep warps set to private out of the listings, trusted players still see them
+  hide-private: true
+
+  # extra lines on the warp icon
+  show-world: true
+  show-coordinates: false
+
+  # tags printed on the icon, the rest are cut
+  tags-in-lore: 3
+
+notifications:
+  # tell the owner when someone uses or rates their warp
+  owner-on-visit: true
+  owner-on-rating: true
+
+  # announce to the whole server
+  broadcast-new-warps: false
+  broadcast-level-up: true
+
+# when the plugin asks a player to write something in chat
+input:
+  # seconds before the request cancels itself
+  timeout-seconds: 60
+
+  # typing any of these cancels, clicking the message in chat works too
+  cancel-words:
+    - cancel
+    - exit
+    - quit
+
+  # bossbar counting the time down
+  bossbar: true
+  bossbar-color: BLUE # BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
+  bossbar-style: PROGRESS # PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+
+  # title flashed on screen when the request opens
+  title: true
+
+  sound-open: BLOCK_NOTE_BLOCK_PLING
+  sound-success: ENTITY_PLAYER_LEVELUP
+  sound-cancel: BLOCK_NOTE_BLOCK_BASS
+
+menu:
+  # icons an owner can pick for their warp, needs the CUSTOM_ICON perk
+  icons:
+    - GRASS_BLOCK
+    - EMERALD
+    - DIAMOND
+    - GOLD_BLOCK
+    - CHEST
+    - ENDER_CHEST
+    - WHEAT
+    - CARROT
+    - REDSTONE
+    - HEART_OF_THE_SEA
+    - NAUTILUS_SHELL
+    - PRISMARINE
+    - SEA_LANTERN
+    - TURTLE_EGG
+    - TRIDENT
+    - BOOKSHELF
+    - ANVIL
+    - BREWING_STAND
+    - BEACON
+    - CAKE
+    - TARGET
+    - BRICKS
+    - OAK_LOG
+    - NETHER_STAR
+    - ELYTRA
+    - TOTEM_OF_UNDYING
+    - SPAWNER
+    - END_CRYSTAL
+    - DRAGON_EGG
+    - CONDUIT
+    - CAMPFIRE
+    - LANTERN
+    - SUNFLOWER
+    - PAINTING
+    - ITEM_FRAME
+
+  # effects played on arrival, needs the PARTICLE perk, keep NONE first so it can be turned off
+  particles:
+    - NONE
+    - WATER_SPLASH
+    - WATER_BUBBLE
+    - DOLPHIN
+    - HEART
+    - VILLAGER_HAPPY
+    - FLAME
+    - SOUL_FIRE_FLAME
+    - END_ROD
+    - PORTAL
+    - TOTEM
+    - NOTE
+    - CLOUD
+    - CRIT
+    - ENCHANTMENT_TABLE
+    - GLOW
+    - FIREWORKS_SPARK
+    - WAX_ON
+    - SPELL_WITCH
+    - SCULK_SOUL
+
+placeholders:
+  # printed when a placeholder has no warp behind it, an empty menu slot or an offline lookup
+  no-warp:
+    name: '&7None'
+    owner: '&7Nobody'
+    category: '&7Uncategorised'
+    description: '&7No description'
+
+  # the two halves of every star bar, colours optional: &6, &#FFAA00, <gold>
+  stars:
+    full: '&#FFEE00⭐'
+    empty: '&8⭐'
+
+# Do not change this
+version: 1

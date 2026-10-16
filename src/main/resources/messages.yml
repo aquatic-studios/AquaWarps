@@ -1,0 +1,383 @@
+prefix: '&#54ADF4&lAquaWarps &7»'
+
+general:
+  no-permission: '%prefix% &#FF2D2DYou do not have permission to do that.'
+  player-only: '%prefix% &#FF2D2DThis command can only be used in-game.'
+  player-not-found: '%prefix% &#FF2D2DPlayer &f%name% &#FF2D2Dwas not found.'
+  usage: '%prefix% &#FFA42DUsage: &f%usage%'
+  reloaded: '%prefix% &#56FF00Configuration reloaded in &f%ms%ms&#56FF00.'
+  invalid-number: '%prefix% &#FF2D2D&f%input% &#FF2D2Dis not a valid number.'
+  disabled: '%prefix% &#FF2D2DThat feature is disabled on this server.'
+
+menu:
+  not-found: '%prefix% &#FF2D2DThe menu &f%menu% &#FF2D2Ddoes not exist.'
+  error: '%prefix% &#FF2D2DThe menu &f%menu% &#FF2D2Dcould not be opened. Check the console.'
+  available: '%prefix% &#54ADF4Menus: &f%menus%'
+
+warp:
+  not-found: '%prefix% &#FF2D2DThere is no warp named &f%name%&#FF2D2D.'
+  not-owner: '%prefix% &#FF2D2DThat warp does not belong to you.'
+  visit-notify: '%prefix% &f%player% &#54ADF4just visited your warp &f%warp%&#54ADF4.'
+
+input:
+  none: '%prefix% &#FF2D2DThere is nothing waiting for your answer.'
+  cancelled: '%prefix% &#FFA42DRequest cancelled.'
+  expired: '%prefix% &#FF2D2DTime is up, the request was cancelled.'
+  empty: '%prefix% &#FF2D2DYou have to write something.'
+  unknown: '%prefix% &#FF2D2DUnknown chat request &f%type%&#FF2D2D.'
+  create:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type the name of your warp'
+    bossbar: '&#54ADF4Write the warp name in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write the name of your new warp in the chat.'
+      - '&7Letters, numbers and underscores only.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  search:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type what you are looking for'
+    bossbar: '&#54ADF4Write your search in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write a warp name, an owner or a #tag.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  rename:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type the new warp name'
+    bossbar: '&#54ADF4Write the new name in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write the new name for your warp.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  description:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type a description line'
+    bossbar: '&#54ADF4Write the description in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write one line of description for your warp.'
+      - '&7Tell visitors what they will find there.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  tag:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type a tag'
+    bossbar: '&#54ADF4Write the tag in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write a tag for your warp.'
+      - '&7Letters and numbers only, no spaces.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  password:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type the warp password'
+    bossbar: '&#54ADF4Write the password in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write the password visitors will need.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  fee:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type the entry fee'
+    bossbar: '&#54ADF4Write the fee in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write how much visitors pay to enter.'
+      - '&7Write &f0 &7to make it free.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  comment:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type your review'
+    bossbar: '&#54ADF4Write your review in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write what you think about this warp.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  trust:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type the player name'
+    bossbar: '&#54ADF4Write the player name in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write the name of the player you trust.'
+      - '&7Trusted players can enter even when the warp is closed.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  ban:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type the player name'
+    bossbar: '&#54ADF4Write the player name in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write the name of the player you want to ban.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+  purge:
+    title: '&#FFEE00&lWrite in chat!'
+    subtitle: '&7Type the amount of days'
+    bossbar: '&#54ADF4Write the days in chat &7(%time%)'
+    prompt:
+      - ''
+      - '&#54ADF4&l» &#FFEE00Write how many days of inactivity to purge.'
+      - '<gray>Write <white>cancel</white> or <click:run_command:"/aquawarps input cancel"><hover:show_text:"<#FF2D2D>Click to cancel"><#FF2D2D><bold>[Click here]</bold></hover></click><gray> to cancel.'
+      - ''
+
+create:
+  success: '%prefix% &#56FF00Warp &f%warp% &#56FF00has been created!'
+  exists: '%prefix% &#FF2D2DA warp named &f%name% &#FF2D2Dalready exists.'
+  name-too-short: '%prefix% &#FF2D2DThe name must be at least &f%min% &#FF2D2Dcharacters.'
+  name-too-long: '%prefix% &#FF2D2DThe name can be at most &f%max% &#FF2D2Dcharacters.'
+  name-invalid: '%prefix% &#FF2D2DThat name contains invalid characters.'
+  name-blacklisted: '%prefix% &#FF2D2DThat name is not allowed.'
+  cost-failed: '%prefix% &#FF2D2DYou need &f%cost% &#FF2D2Dto create a warp.'
+  charged: '%prefix% &#FFA42D%cost% &#FFA42Dwas taken from your balance.'
+  limit: '%prefix% &#FF2D2DYou reached your warp limit &7(%current%/%max%)&#FF2D2D.'
+  world-blocked: '%prefix% &#FF2D2DWarps cannot be created in this world.'
+  too-close: '%prefix% &#FF2D2DThere is another warp within &f%distance% &#FF2D2Dblocks.'
+  broadcast: '%prefix% &f%player% &#54ADF4opened a new warp: &f%warp%'
+
+delete:
+  success: '%prefix% &fWarp &#54ADF4%warp% &fhas been deleted.'
+  confirm: '%prefix% &#FF2D2DThis deletes your warp forever.'
+
+edit:
+  renamed: '%prefix% &#56FF00Warp renamed to &f%name%&#56FF00.'
+  cost-failed: '%prefix% &#FF2D2DYou need &f%cost% &#FF2D2Dfor that.'
+  description-set: '%prefix% &#56FF00Description line added.'
+  description-cleared: '%prefix% &fDescription cleared.'
+  description-full: '%prefix% &#FF2D2DYour warp already has &f%max% &#FF2D2Ddescription lines.'
+  description-too-long: '%prefix% &#FF2D2DThe line can be at most &f%max% &#FF2D2Dcharacters.'
+  tag-added: '%prefix% &#56FF00Tag &f#%tag% &#56FF00added.'
+  tag-removed: '%prefix% &fTag &#54ADF4#%tag% &fremoved.'
+  tag-invalid: '%prefix% &#FF2D2DTags allow letters and numbers only, up to &f%max% &#FF2D2Dcharacters.'
+  tag-exists: '%prefix% &#FFA42DThat warp already has this tag.'
+  tag-limit: '%prefix% &#FF2D2DYou reached the limit of &f%max% &#FF2D2Dtags.'
+  tag-none: '%prefix% &#FF2D2DThat warp has no tags.'
+  icon-set: '%prefix% &#56FF00Icon changed to &f%icon%&#56FF00.'
+  icon-invalid: '%prefix% &#FF2D2D&f%icon% &#FF2D2Dis not a valid item.'
+  icon-need-item: '%prefix% &#FF2D2DHold the item you want to use as the icon.'
+  particle-set: '%prefix% &#56FF00Arrival effect changed to &f%particle%&#56FF00.'
+  category-set: '%prefix% &#56FF00Category changed to %category%&#56FF00.'
+  access-set: '%prefix% &#56FF00Privacy changed to %access%&#56FF00.'
+  opened: '%prefix% &#56FF00Your warp is open to everyone.'
+  closed: '%prefix% &#FFA42DYour warp is closed. Only you and trusted players can enter.'
+  password-set: '%prefix% &#56FF00Password updated.'
+  password-cleared: '%prefix% &fPassword removed.'
+  fee-set: '%prefix% &#56FF00Entry fee set to &f%cost%&#56FF00.'
+  fee-too-high: '%prefix% &#FF2D2DThe highest fee allowed is &f%max%&#FF2D2D.'
+  relocated: '%prefix% &#56FF00Warp &f%warp% &#56FF00moved to your position.'
+
+teleport:
+  world-missing: '%prefix% &#FF2D2DThat world is no longer loaded.'
+  hidden: '%prefix% &#FF2D2DThis warp is hidden while the staff reviews it.'
+  banned: '%prefix% &#FF2D2DYou are banned from this warp.'
+  owner-offline: '%prefix% &#FF2D2DThe owner of this warp is offline.'
+  private: '%prefix% &#FF2D2DThis warp is private and you are not trusted.'
+  closed: '%prefix% &#FF2D2DThis warp is closed by its owner right now.'
+  password-required: '%prefix% &#FF2D2DThis warp asks for a password. Use &f/aquawarps go %warp% <password>'
+  password-wrong: '%prefix% &#FF2D2DWrong password.'
+  already: '%prefix% &#FFA42DYou already have a teleport in progress.'
+  cooldown: '%prefix% &#FFA42DWait &f%time% &#FFA42Dbefore travelling again.'
+  fee-failed: '%prefix% &#FF2D2DYou need &f%cost% &#FF2D2Dto enter this warp.'
+  fee-paid: '%prefix% &#FFA42DYou paid &f%cost% &#FFA42Dto &f%owner%&#FFA42D.'
+  fee-earned: '%prefix% &f%player% &#56FF00paid &f%cost% &#56FF00to enter &f%warp%&#56FF00.'
+  warmup: '&#54ADF4Travelling to &f%warp% &#54ADF4in &f%seconds%&#54ADF4...'
+  warmup-title: '&#FFEE00&l%seconds%'
+  warmup-subtitle: '&7Do not move'
+  cancelled-move: '%prefix% &#FF2D2DTeleport cancelled: you moved.'
+  cancelled-damage: '%prefix% &#FF2D2DTeleport cancelled: you took damage.'
+  success: '%prefix% &#56FF00You arrived at &f%warp% &7by %owner%&#56FF00.'
+  unsafe: '%prefix% &#FF2D2DThe destination is not safe right now.'
+  back-none: '%prefix% &#FF2D2DThere is no previous position saved.'
+  back-success: '%prefix% &#56FF00You are back where you were.'
+  random: '%prefix% &#54ADF4The current took you to &f%warp%&#54ADF4.'
+  random-none: '%prefix% &#FF2D2DThere are no warps to explore yet.'
+
+rating:
+  saved: '%prefix% &#56FF00You rated &f%warp% &#56FF00with %stars%&#56FF00.'
+  updated: '%prefix% &#56FF00You updated your rating of &f%warp% &#56FF00to %stars%&#56FF00.'
+  removed: '%prefix% &fYour rating of &#54ADF4%warp% &fwas removed.'
+  self: '%prefix% &#FF2D2DYou cannot rate your own warp.'
+  needs-visit: '%prefix% &#FF2D2DVisit the warp before rating it.'
+  invalid-stars: '%prefix% &#FF2D2DThe rating must be between &f1 &#FF2D2Dand &f5&#FF2D2D.'
+  cooldown: '%prefix% &#FFA42DYou can change your rating in &f%time%&#FFA42D.'
+  comment-saved: '%prefix% &#56FF00Review published.'
+  comment-too-long: '%prefix% &#FF2D2DThe review can be at most &f%max% &#FF2D2Dcharacters.'
+  owner-notify: '%prefix% &f%player% &#54ADF4rated &f%warp% &#54ADF4with %stars%&#54ADF4.'
+
+favorite:
+  added: '%prefix% &#56FF00%warp% &#56FF00was added to your favourites.'
+  removed: '%prefix% &f%warp% &fwas removed from your favourites.'
+
+trust:
+  added: '%prefix% &#56FF00%name% &#56FF00is now trusted on &f%warp%&#56FF00.'
+  removed: '%prefix% &f%name% &fis no longer trusted on &#54ADF4%warp%&f.'
+  already: '%prefix% &#FFA42DThat player is already trusted.'
+  not-trusted: '%prefix% &#FF2D2DThat player is not trusted on this warp.'
+
+ban:
+  added: '%prefix% &#56FF00%name% &#56FF00has been banned from &f%warp%&#56FF00.'
+  removed: '%prefix% &f%name% &fcan visit &#54ADF4%warp% &fagain.'
+  already: '%prefix% &#FFA42DThat player is already banned.'
+  not-banned: '%prefix% &#FF2D2DThat player is not banned.'
+  self: '%prefix% &#FF2D2DYou cannot ban yourself.'
+
+promotion:
+  success: '%prefix% &#56FF00Warp &f%warp% &#56FF00promoted with %tier% &#56FF00for &f%duration%&#56FF00.'
+  disabled: '%prefix% &#FF2D2DPromotions are disabled.'
+  no-slots: '%prefix% &#FF2D2DThere are no promotion slots left. Try again later.'
+  already: '%prefix% &#FFA42DThat warp is already promoted. It ends in &f%time%&#FFA42D.'
+  unknown-tier: '%prefix% &#FF2D2DThat promotion tier does not exist.'
+  no-funds: '%prefix% &#FF2D2DYou need &f%cost% &#FF2D2Dfor that promotion.'
+  expired: '%prefix% &#FFA42DThe promotion on your warp &f%warp% &#FFA42Dhas ended.'
+  status-none: '&7No active promotion'
+  status-active: '%tier% &7- &f%time% &7left'
+
+pearls:
+  balance: '%prefix% &#54ADF4You have &f%amount% %currency%&#54ADF4.'
+  earned: '%prefix% &#56FF00+%amount% %currency% &7(%reason%)'
+  given: '%prefix% &#56FF00Gave &f%amount% &#56FF00to &f%name%&#56FF00.'
+  taken: '%prefix% &#56FF00Took &f%amount% &#56FF00from &f%name%&#56FF00.'
+  set: '%prefix% &#56FF00%name% &#56FF00now has &f%amount%&#56FF00.'
+
+slots:
+  bought: '%prefix% &#56FF00Extra slot bought. You can now own &f%max% &#56FF00warps.'
+  max: '%prefix% &#FF2D2DYou already bought every extra slot.'
+  cost-failed: '%prefix% &#FF2D2DYou need &f%cost% &#FF2D2Dfor the next slot.'
+
+level:
+  up: '%prefix% &#54ADF4Your warp &f%warp% &#54ADF4reached level &f%level%&#54ADF4!'
+  broadcast: '%prefix% &7The warp &f%warp% &7by &f%owner% &7reached level &#54ADF4%level%&7.'
+  perk: '%prefix% &#FFEE00Perk unlocked: &f%perk%'
+  locked: '%prefix% &#FF2D2DYour warp needs level &f%level% &#FF2D2Dto use that.'
+
+passport:
+  stamp: '%prefix% &#54ADF4New stamp in your passport: &f%warp% &7(%total% stamps)'
+  milestone: '%prefix% &#FFEE00Milestone reached: &f%amount% &#FFEE00warps visited!'
+  rank-up: '%prefix% &#54ADF4New explorer rank: %rank%'
+  disabled: '%prefix% &#FF2D2DThe passport is disabled.'
+  reached: '&#56FF00Unlocked'
+  pending: '&7%missing% warps to go'
+  extra-reward: '&7Plus an extra reward in your inventory.'
+
+report:
+  sent: '%prefix% &#56FF00Report sent. Thanks for keeping the server clean.'
+  self: '%prefix% &#FF2D2DYou cannot report your own warp.'
+  already: '%prefix% &#FFA42DYou already reported that warp.'
+  cooldown: '%prefix% &#FFA42DWait &f%time% &#FFA42Dbefore reporting again.'
+  staff: '%prefix% &#FF2D2D[Report] &f%player% &7reported &f%warp% &7by &f%owner%&7: &f%reason%'
+  none: '%prefix% &#56FF00There are no pending reports.'
+  resolved: '%prefix% &#56FF00Report marked as resolved.'
+
+category:
+  not-found: '%prefix% &#FF2D2DThe category &f%name% &#FF2D2Ddoes not exist.'
+  no-permission: '%prefix% &#FF2D2DYou cannot publish in %name%&#FF2D2D.'
+  locked: '&#FF2D2DLocked for publishing'
+
+admin:
+  deleted: '%prefix% &#56FF00Deleted the warp &f%warp% &#56FF00owned by &f%owner%&#56FF00.'
+  featured-on: '%prefix% &#56FF00%warp% &#56FF00is now featured.'
+  featured-off: '%prefix% &f%warp% &fis no longer featured.'
+  hidden-on: '%prefix% &#FFA42D%warp% &#FFA42Dis now hidden.'
+  hidden-off: '%prefix% &#56FF00%warp% &#56FF00is visible again.'
+  owner-changed: '%prefix% &#56FF00%warp% &#56FF00now belongs to &f%name%&#56FF00.'
+  purged: '%prefix% &#56FF00Purged &f%amount% &#56FF00warps.'
+  stats:
+    - ''
+    - '&#54ADF4&lAquaWarps &7- &fStatistics'
+    - '&#54ADF4Warps: &f%total%'
+    - '&#54ADF4Promoted: &f%promoted%'
+    - '&#54ADF4Hidden: &f%hidden%'
+    - '&#54ADF4Pending reports: &f%reports%'
+    - '&#54ADF4Storage: &f%storage%'
+    - ''
+
+toggle:
+  selected: '  &a+ &f%value%'
+  unselected: '  &8- &f%value%'
+
+sort:
+  trending: '&#54ADF4Trending'
+  rating: '&#FFEE00Best rated'
+  visits: '&#56FF00Most visited'
+  newest: '&#FF9E08Newest'
+  oldest: '&7Oldest'
+  alphabetical: '&fAlphabetical'
+  favorites: '&#FF2D2DMost saved'
+  level: '&#FFA42DWarp level'
+  random: '&7Random'
+
+state:
+  public: '&#56FF00Public'
+  password: '&#FFA42DPassword'
+  private: '&#FF2D2DPrivate'
+  open: '&#56FF00Open'
+  closed: '&#FF2D2DClosed'
+  free: '&#56FF00Free'
+  yes: '&#56FF00Yes'
+  no: '&#FF2D2DNo'
+  saved: '&#56FF00Saved'
+  not-saved: '&7Not saved'
+  not-rated: '&7Not rated yet'
+  selected: '&#56FF00Selected'
+  unselected: '&7Click to select'
+  no-tags: '&7No tags'
+  no-comment: '&7No comment'
+  promoted-prefix: '&#FFEE00* '
+  featured: '&#FFEE00Featured by the staff'
+  deleted: '&7(deleted warp)'
+  all: '&7All'
+  none: '&7None'
+  unlimited: '&#FFEE00Unlimited'
+  max-rank: '&#FFEE00Max rank'
+
+help:
+  format:
+    - ''
+    - '&#54ADF4&lAquaWarps &7- &fCommands'
+    - ''
+    - '&#54ADF4/aquawarps &7- &fOpen the warp menu'
+    - '&#54ADF4/aquawarps create [name] &7- &fCreate a warp where you stand'
+    - '&#54ADF4/aquawarps delete <warp> &7- &fDelete one of your warps'
+    - '&#54ADF4/aquawarps go <warp> [password] &7- &fTravel to a warp'
+    - '&#54ADF4/aquawarps edit <warp> &7- &fOpen the edit panel'
+    - '&#54ADF4/aquawarps list [category] &7- &fBrowse every warp'
+    - '&#54ADF4/aquawarps mine · favorites &7- &fYour warps and favourites'
+    - '&#54ADF4/aquawarps search [text] &7- &fSearch by name, owner or tag'
+    - '&#54ADF4/aquawarps random &7- &fLet the current take you'
+    - '&#54ADF4/aquawarps rate <warp> <1-5> [review] &7- &fRate a warp'
+    - '&#54ADF4/aquawarps favorite <warp> &7- &fSave or unsave a warp'
+    - '&#54ADF4/aquawarps promote <warp> [tier] &7- &fPromote your warp'
+    - '&#54ADF4/aquawarps top · passport · pearls &7- &fRankings and progress'
+    - '&#54ADF4/aquawarps trust/untrust <warp> <player> &7- &fTrusted list'
+    - '&#54ADF4/aquawarps ban/unban <warp> <player> &7- &fBanned list'
+    - '&#54ADF4/aquawarps category/description/tag &7- &fWarp content'
+    - '&#54ADF4/aquawarps icon/relocate/rename/fee &7- &fWarp settings'
+    - '&#54ADF4/aquawarps report <warp> [reason] &7- &fReport a warp'
+    - '&#54ADF4/aquawarps back &7- &fReturn to your last position'
+    - '&#54ADF4/aquawarps open <menu> [warp] &7- &fOpen any menu'
+    - ''
+  admin:
+    - '&#FF2D2D/aquawarps admin &7- &fStaff panel'
+    - '&#FF2D2D/aquawarps admin delete <warp> &7- &fDelete any warp'
+    - '&#FF2D2D/aquawarps admin feature <warp> &7- &fFeature a warp'
+    - '&#FF2D2D/aquawarps admin hide <warp> &7- &fHide a warp'
+    - '&#FF2D2D/aquawarps admin owner <warp> <player> &7- &fChange the owner'
+    - '&#FF2D2D/aquawarps admin reports &7- &fPending reports'
+    - '&#FF2D2D/aquawarps admin pearls <give|take|set> <player> <amount>'
+    - '&#FF2D2D/aquawarps admin purge <days> &7- &fDelete inactive warps'
+    - '&#FF2D2D/aquawarps admin tp <warp> &7- &fTeleport without checks'
+    - '&#FF2D2D/aquawarps admin stats &7- &fPlugin statistics'
+    - '&#FF2D2D/aquawarps reload &7- &fReload the configuration'
+    - ''
+
+# Do not change this
+version: 1

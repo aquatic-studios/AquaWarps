@@ -1,0 +1,47 @@
+menu_title: '&8Report Warp'
+size: 27
+
+content:
+  source: report_reasons
+  slots:
+    - 10-16
+  item:
+    material: PAPER
+    display_name: '&#FF2D2D&l%reason%'
+    lore:
+      - '&7Send this report to the staff.'
+      - ''
+      - '&#FF9E08Click to send'
+    left_click_commands:
+      - '[report] %reason%'
+  previous:
+    material: ARROW
+    slot: 18
+    display_name: '&#54ADF4&lPrevious Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+  next:
+    material: ARROW
+    slot: 26
+    display_name: '&#54ADF4&lNext Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+
+
+items:
+  back:
+    material: BOOK
+    slot: 22
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the previous menu.'
+    left_click_commands:
+      - '[menu] warp_info %warp_name%'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-26

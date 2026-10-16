@@ -1,0 +1,93 @@
+categories:
+  general:
+    display: '&#54ADF4General'
+    material: COMPASS
+    slot: 10
+    priority: 0
+    fallback: true
+    description:
+      - 'Warps that do not fit anywhere else.'
+
+  shops:
+    display: '&#56FF00Shops'
+    material: EMERALD
+    slot: 11
+    priority: 1
+    description:
+      - 'Player shops, markets and auctions.'
+
+  farms:
+    display: '&#A8E063Farms'
+    material: WHEAT
+    slot: 12
+    priority: 2
+    description:
+      - 'Public mob, crop and resource farms.'
+
+  builds:
+    display: '&#FBC2EBBuilds'
+    material: BRICKS
+    slot: 13
+    priority: 3
+    description:
+      - 'Megabuilds, cities and art worth a visit.'
+
+  minigames:
+    display: '&#F5576CMinigames'
+    material: TARGET
+    slot: 14
+    priority: 4
+    description:
+      - 'Parkour, mazes, arenas and player made challenges.'
+
+  redstone:
+    display: '&#FF5858Redstone'
+    material: REDSTONE
+    slot: 15
+    priority: 5
+    description:
+      - 'Machines, automatic farms and engineering madness.'
+
+  adventure:
+    display: '&#43CEA2Adventure'
+    material: FILLED_MAP
+    slot: 16
+    priority: 6
+    description:
+      - 'Dungeons, maps and routes ready to explore.'
+
+  social:
+    display: '&#FCB69FSocial'
+    material: CAKE
+    slot: 19
+    priority: 7
+    description:
+      - 'Bars, plazas, party halls and meeting points.'
+
+  bases:
+    display: '&#C9D6FFBases'
+    material: IRON_DOOR
+    slot: 20
+    priority: 8
+    description:
+      - 'Houses and bases open to the public.'
+
+  ocean:
+    display: '&#00C6FFOcean'
+    material: HEART_OF_THE_SEA
+    slot: 21
+    priority: 9
+    description:
+      - 'Everything that lives under the water.'
+
+  premium:
+    display: '&#FFEE00&lPremium'
+    material: NETHER_STAR
+    slot: 22
+    priority: 10
+    permission: 'aquawarps.category.premium'
+    description:
+      - 'Exclusive category for donator ranks.'
+
+# Do not change this
+version: 1

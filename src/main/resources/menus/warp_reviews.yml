@@ -1,0 +1,71 @@
+menu_title: '&8Reviews'
+size: 54
+
+content:
+  source: reviews
+  slots:
+    - 0-44
+  item:
+    material: PLAYER_HEAD
+    display_name: '&#FFEE00&l%player%'
+    lore:
+      - '%stars%'
+      - '&f%comment%'
+      - ''
+      - '&8%date%'
+  empty:
+    material: BOOK
+    display_name: '&#FFA42D&lNo reviews yet'
+    lore:
+      - '&7Be the first one to rate this warp.'
+  previous:
+    material: ARROW
+    slot: 48
+    display_name: '&#54ADF4&lPrevious Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+  next:
+    material: ARROW
+    slot: 50
+    display_name: '&#54ADF4&lNext Page'
+    lore:
+      - '&7Page &f%page%&7/&f%pages%'
+
+
+items:
+  summary:
+    material: SUNFLOWER
+    slot: 45
+    display_name: '&#FFEE00&lSummary'
+    lore:
+      - '&#54ADF4Average: %warp_stars% &f%warp_rating%'
+      - '&#54ADF4Votes: &f%warp_votes%'
+      - '&#54ADF4Visits: &f%warp_visits%'
+      - '&#54ADF4Saved by: &f%warp_favorites%'
+
+  rate:
+    material: NAME_TAG
+    slot: 47
+    display_name: '&#FFEE00&lRate this warp'
+    lore:
+      - '&7Your vote: %warp_your_rating%'
+      - ''
+      - '&#FF9E08Click to rate'
+    left_click_commands:
+      - '[menu] warp_rate %warp_name%'
+  back:
+    material: BOOK
+    slot: 49
+    display_name: '&#54ADF4&lBack'
+    lore:
+      - '&7Return to the previous menu.'
+    left_click_commands:
+      - '[menu] warp_info %warp_name%'
+
+filler:
+  enabled: false
+  material: BLACK_STAINED_GLASS_PANE
+  display_name: ' '
+  custom-model-data: 0
+  slots:
+    - 0-53
